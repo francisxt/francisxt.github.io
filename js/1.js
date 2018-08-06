@@ -1,58 +1,60 @@
 
- window.onload = function(){
+ window.onload = function(){    
+    set_calendar();
+}
+
+
+function set_calendar() {
+    document.getElementById('ini-calendar').innerHTML = "";
     var d = new Date(document.getElementById("txtStartDate").value);
-    console.log(document.getElementById("txtStartDate").value);
-    console.log(d);
+    d.setDate(d.getDate() + 1);  
     var month_name = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-    var month = d.getMonth();   //0-11
-    var year = d.getFullYear(); //2018
-    //var first_date = month_name[month] + " " + 1 + " " + year;
-    //August 1 2018
+    var month = d.getMonth();
+    var year = d.getFullYear();
     var tmp = new Date(d).toDateString();
-    //Sun Aug 05 2018
-    var first_day = tmp.substring(0, 3);    //Mon
+    var first_day = tmp.substring(0, 3);
     console.log(first_day);
     var day_name = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-    var day_no = day_name.indexOf(first_day);   //1
-    var days = new Date(year, month+1, 0).getDate();    //30
-    var day = d.getDate();    //06
-    //Tue Sep 30 2014 ...
+    var day_no = day_name.indexOf(first_day);
+    var days = new Date(year, month+1, 0).getDate();
+    var day = d.getDate();
+   
     var number_of_days = document.getElementById("txtNumberOfDays").value;
     console.log(parseInt(day)+parseInt(number_of_days));
      if (days-day > number_of_days) {
-    	var calendar = get_calendar(day, day_no, parseInt(day)+parseInt(number_of_days));
-    	generate_calendar(calendar, month_name[month],year);
+        var calendar = get_calendar(day, day_no, parseInt(day)+parseInt(number_of_days));
+        generate_calendar(calendar, month_name[month],year);
     }
     else{
-    	var calendar = get_calendar(day, day_no, days);
-    	generate_calendar(calendar, month_name[month],year);
-		number_of_days -= days - day;
-		var next_month = d.getMonth()+1;		
-		while(number_of_days > 0){
-			if (next_month == 12) {
-    			next_month=0;
-    			year ++;
-    		}
-    		
-			var next_first_date = month_name[next_month] + " " + 1 + " " + year;
-    		var tmp = new Date(next_first_date).toDateString();
-			var next_first_day = tmp.substring(0, 3);    //Mon      
-    		var next_day_no = day_name.indexOf(next_first_day);   //1
-    		var new_days = new Date(year, next_month+1, 0).getDate();
-    		
-			if (number_of_days > new_days) {
-				var calendar = get_calendar(1, next_day_no, new_days);
-		    	generate_calendar(calendar, month_name[next_month], year);
+        var calendar = get_calendar(day, day_no, days);
+        generate_calendar(calendar, month_name[month],year);
+        number_of_days -= days - day;
+        var next_month = d.getMonth()+1;        
+        while(number_of_days > 0){
+            if (next_month == 12) {
+                next_month=0;
+                year ++;
+            }
+            
+            var next_first_date = month_name[next_month] + " " + 1 + " " + year;
+            var tmp = new Date(next_first_date).toDateString();
+            var next_first_day = tmp.substring(0, 3);    //Mon      
+            var next_day_no = day_name.indexOf(next_first_day);   //1
+            var new_days = new Date(year, next_month+1, 0).getDate();
+            
+            if (number_of_days > new_days) {
+                var calendar = get_calendar(1, next_day_no, new_days);
+                generate_calendar(calendar, month_name[next_month], year);
 
                 number_of_days -= new_days;
                 next_month++;
-			}
-			else{
-				var calendar = get_calendar(1, next_day_no, number_of_days);
-		    	generate_calendar(calendar, month_name[next_month],year);
-				number_of_days = 0;
-			}
-		}
+            }
+            else{
+                var calendar = get_calendar(1, next_day_no, number_of_days);
+                generate_calendar(calendar, month_name[next_month],year);
+                number_of_days = 0;
+            }
+        }
     }  
 }
 
