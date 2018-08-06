@@ -79,7 +79,7 @@ function get_calendar(day, day_no, days){
         }
         var td = document.createElement('td');
         td.innerHTML = "";
-        td.classList.add('Past');
+        td.classList.add('past');
         tr.appendChild(td);
     }
     
@@ -92,6 +92,9 @@ function get_calendar(day, day_no, days){
         else
         {
         	td.classList.add('present');
+        }
+        if (count==1) {
+            td.classList.add('first_day');
         }
         td.innerHTML = count; 
         
