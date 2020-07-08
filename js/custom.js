@@ -69,7 +69,7 @@ $(function () {
   /* typejs
   -------------------------------------------------------*/
   $('.header .caption h2 span').typed({
-    strings: ["Desarrollador","Desarrollador Web","Desarrollador Movil","Programador"],
+    strings: ["Desarrollador","Analista","Software Developer","Mobile Developer","Web Developer"],
     loop: true,
     startDelay: 1000,
     backDelay: 2000
