@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta de Desarrollo - Sistema de Parqueadero y Car Wash</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: none;
+            font-size: 2.2em;
+            margin-top: 0;
+        }
+        .header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #0056b3;
+            text-align: center;
+        }
+        .header p {
+            margin: 5px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+        strong {
+            color: #111;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .note {
+            background-color: #e7f3fe;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+        .price {
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #0056b3;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: right;
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Propuesta de Desarrollo de Sistema de Gestión</h1>
+            <p><strong>PARA:</strong> Holiday Inn Airport</p>
+            <p><strong>DE:</strong> FG Tech</p>
+            <p><strong>FECHA:</strong> 22 de agosto de 2025</p>
+        </div>
+
+        <h2>1. Introducción</h2>
+        <p>
+            FG Tech se complace en presentar esta propuesta actualizada para el diseño, desarrollo e implementación de un <strong>Sistema Integral de Gestión de Parqueadero y Car Wash</strong> para el Holiday Inn Airport.
+        </p>
+        <p>
+            Nuestra solución consiste en una plataforma web centralizada para la administración y la reportería, junto con tres aplicaciones móviles intuitivas para la plataforma Android. Estas herramientas están diseñadas para optimizar las operaciones diarias de su personal en garita, seguridad y lavado de vehículos. El objetivo es digitalizar y automatizar el flujo de trabajo, desde el ingreso del vehículo hasta su salida y limpieza, mejorando la eficiencia, el control y la experiencia del cliente.
+        </p>
+
+        <h2>2. Alcance del Proyecto</h2>
+        <p>
+            El proyecto contempla el desarrollo y entrega de los siguientes componentes:
+        </p>
+        <ul>
+            [cite_start]<li><strong>Plataforma Web de Administración Central:</strong> Panel de control para la gestión de roles, tarifas, supervisión de operaciones y generación de reportes[cite: 55, 63].</li>
+            <li><strong>Tres (3) Aplicaciones Móviles para Android:</strong>
+                <ul>
+                    [cite_start]<li><strong>App "Garita":</strong> Para el registro inicial de vehículos[cite: 4, 15].</li>
+                    [cite_start]<li><strong>App "Seguridad":</strong> Para la gestión del ingreso, asignación de espacios y registro de salida[cite: 7, 52].</li>
+                    [cite_start]<li><strong>App "Lavado":</strong> Para el control del proceso de limpieza de vehículos[cite: 36].</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="note">
+            <p><strong>Nota:</strong> Esta propuesta contempla el desarrollo de aplicaciones para el sistema operativo Android, con distribución interna a través de un portal de descarga. El desarrollo para otras plataformas (como iOS) o la publicación en tiendas de aplicaciones públicas no está incluido en este alcance.</p>
+        </div>
+
+        <h2>3. Descripción de Módulos a Desarrollar</h2>
+
+        <h3>Plataforma Web de Administración</h3>
+        <p>Será el centro de control del sistema, accesible desde cualquier navegador web.</p>
+        <ul>
+            <li><strong>Dashboard Principal:</strong> Visualización en tiempo real de la ocupación del parqueadero, vehículos en proceso de lavado y estadísticas clave de ingresos.</li>
+            [cite_start]<li><strong>Gestión de Parqueadero:</strong> Un mapa o listado visual del parqueadero, mostrando los espacios ocupados, disponibles y el estado de cada vehículo (ej. Limpio, Sucio, Próximo a salir)[cite: 58, 60].</li>
+            <li><strong>Gestión de Usuarios y Roles:</strong> Permitirá crear y administrar las cuentas del personal con tres niveles de acceso definidos: Administrador, Gerencia y Operación.</li>
+            <li><strong>Módulo de Tarifas y Facturación:</strong>
+                <ul>
+                    <li>Panel para configurar las tarifas del servicio de parqueadero (por hora para visitantes, por día para huéspedes) y del servicio de lavado.</li>
+                    [cite_start]<li>Registro de los pagos realizados por los clientes para la generación de reportes de ventas[cite: 65].</li>
+                </ul>
+            </li>
+            [cite_start]<li><strong>Módulo de Reportería:</strong> Generación de informes detallados, exportables a PDF o Excel[cite: 55].
+                <ul>
+                    [cite_start]<li><strong>Reportes de Ama de Llaves:</strong> Limpieza diaria/mensual y estado de vehículos en parqueadero con alertas de lavado[cite: 57, 58].</li>
+                    [cite_start]<li><strong>Reportes de Seguridad:</strong> Estado diario de vehículos, disponibilidad, ocupación y tipos de vehículos[cite: 59, 60, 61, 62].</li>
+                    [cite_start]<li><strong>Reportes Contables:</strong> Ocupación, venta diaria/mensual y gratuidades aplicadas[cite: 64, 65, 66].</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Aplicación Móvil: Garita (Android)</h3>
+        <p>Diseñada para 2 usuarios, con un proceso de registro ágil.</p>
+        <ul>
+            [cite_start]<li><strong>Formulario de Registro de Vehículo:</strong> Captura de Placa, Marca, Color, Nombre y Apellido del cliente, y Correo Electrónico[cite: 6, 14, 17, 18, 19].</li>
+            [cite_start]<li><strong>Emisión de Ticket Digital:</strong> Al presionar "Registrar" [cite: 22][cite_start], el sistema enviará automáticamente un correo electrónico al cliente con un <strong>código QR</strong> como ticket de ingreso digital[cite: 21].</li>
+        </ul>
+        
+        <h3>Aplicación Móvil: Seguridad (Android)</h3>
+        <p>Diseñada para 2 usuarios, para controlar el flujo de vehículos.</p>
+        <ul>
+            <li><strong>Proceso de Ingreso:</strong>
+                <ul>
+                    [cite_start]<li>Búsqueda del vehículo por placa[cite: 8].</li>
+                    [cite_start]<li>Asignación de un número de parqueadero disponible[cite: 9].</li>
+                    [cite_start]<li>Selección del tipo de estancia: <strong>Visitante (por horas)</strong> o <strong>Huésped (PM)</strong>[cite: 10, 12]. [cite_start]Si se selecciona "Huésped (PM)", el vehículo se marca como "Sucio" para el servicio de lavado[cite: 13, 35].</li>
+                </ul>
+            </li>
+            <li><strong>Proceso de Salida:</strong>
+                <ul>
+                    [cite_start]<li>Consulta del estado del vehículo[cite: 50].</li>
+                    [cite_start]<li>Registro de la revisión de salida del vehículo[cite: 51, 52].</li>
+                    [cite_start]<li>Al confirmar la salida, el espacio de parqueadero se libera en el sistema[cite: 53].</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Aplicación Móvil: Lavado (Android)</h3>
+        <p>Diseñada para 5 usuarios, para gestionar las tareas de limpieza.</p>
+        <ul>
+            [cite_start]<li><strong>Panel de Vehículos por Lavar:</strong> Visualización de la lista de vehículos marcados como "Sucio"[cite: 37, 39].</li>
+            <li><strong>Registro del Proceso de Lavado:</strong>
+                <ul>
+                    [cite_start]<li>Botones para registrar la <strong>hora de inicio y fin</strong> del lavado[cite: 40, 41].</li>
+                    [cite_start]<li>Función para capturar una <strong>imagen de evidencia</strong> del vehículo limpio[cite: 42].</li>
+                </ul>
+            </li>
+            [cite_start]<li><strong>Finalización y Notificación:</strong> Al finalizar el lavado, el estado del vehículo se actualiza a "Limpio" en todo el sistema[cite: 48]. [cite_start]Se enviarán notificaciones por correo electrónico tanto al cliente como al personal del hotel[cite: 46, 47].</li>
+        </ul>
+
+        <h2>4. Cronograma de Desarrollo</h2>
+        <p>El proyecto se ejecutará en un marco de tiempo estimado de <strong>2 semanas</strong>, distribuido de la siguiente manera:</p>
+        <ul>
+            <li><strong>Semana 1: Backend, Base de Datos y Plataforma Web</strong>
+                <ul>
+                    <li>Días 1-2: Arquitectura del sistema, diseño de base de datos y configuración del módulo de tarifas.</li>
+                    <li>Días 3-5: Desarrollo del núcleo de la plataforma web, gestión de roles y sistema de reportería.</li>
+                </ul>
+            </li>
+            <li><strong>Semana 2: Aplicaciones Móviles, Integración y Despliegue</strong>
+                <ul>
+                    <li>Días 6-8: Desarrollo de las tres aplicaciones móviles para Android.</li>
+                    <li>Días 9-10: Integración final, pruebas de campo, despliegue en la infraestructura del cliente y capacitación.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>5. Inversión</h2>
+        <p>El costo total por el desarrollo e implementación de la solución completa descrita en esta propuesta es de:</p>
+        <div class="price">
+            $500.00 USD
+        </div>
+
+        <h2>6. Términos y Condiciones</h2>
+        <ul>
+            <li><strong>Responsabilidades del Cliente:</strong> El cliente se compromete a proveer la infraestructura necesaria para el despliegue de la plataforma (servidor, dominio, certificados de seguridad, acceso a red, etc.).</li>
+            <li><strong>Entregables:</strong> FG Tech entregará las aplicaciones funcionales desplegadas. Esta propuesta <strong>no incluye la entrega de los códigos fuente</strong>.</li>
+            <li><strong>Exclusiones:</strong> El alcance de este proyecto <strong>no incluye ninguna integración con hardware físico</strong> (impresoras, barreras de acceso, etc.). Dichas integraciones podrán ser evaluadas como una segunda fase del proyecto.</li>
+            <li><strong>Soporte y Mantenimiento:</strong>
+                <ul>
+                    <li>Se incluye <strong>1 semana de soporte</strong> post-entrega para realizar ajustes menores.</li>
+                    <li>Se ofrece un periodo de <strong>3 meses de soporte técnico</strong> para corregir eventuales errores de funcionamiento.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="footer">
+            <p>Agradecemos su confianza en FG Tech.</p>
+            <p><strong>Atentamente, El equipo de FG Tech</strong></p>
+        </div>
+    </div>
+
+</body>
+</html>
