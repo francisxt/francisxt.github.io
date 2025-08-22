@@ -25,6 +25,10 @@
         .gradient-bg {
             background: linear-gradient(135deg, #4f46e5 0%, #818cf8 100%);
         }
+        /* Class to prevent breaking inside an element during PDF generation */
+        .page-break-inside-avoid {
+            page-break-inside: avoid;
+        }
         @media print {
             #download-button {
                 display: none;
@@ -49,7 +53,7 @@
     <div id="proposal-content" class="container mx-auto max-w-4xl bg-white rounded-2xl shadow-2xl my-10 border border-gray-200">
         
         <!-- Header Section -->
-        <header class="text-center p-8 md:p-12">
+        <header class="text-center p-8 md:p-12 page-break-inside-avoid">
             <!-- Logo Minimalista SVG -->
             <svg class="mx-auto mb-6 h-16 w-16 text-indigo-600" viewBox="0 0 100 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0ZM50 10C27.9086 10 10 27.9086 10 50C10 72.0914 27.9086 90 50 90C72.0914 90 90 72.0914 90 50C90 27.9086 72.0914 10 50 10Z" fill-opacity="0.1"/>
@@ -66,7 +70,7 @@
 
         <div class="px-8 md:px-12 pb-8 md:pb-12">
             <!-- Introduction Section -->
-            <section class="mt-8">
+            <section class="mt-8 page-break-inside-avoid">
                 <h2 class="text-3xl font-bold text-gray-800 section-title">1. Introducción</h2>
                 <div class="flex flex-col md:flex-row gap-8 mt-8 items-center">
                     <div class="md:w-2/3 text-gray-600 text-base leading-relaxed">
@@ -88,7 +92,7 @@
             </section>
 
             <!-- Scope Section -->
-            <section class="mt-12">
+            <section class="mt-12 page-break-inside-avoid">
                 <h2 class="text-3xl font-bold text-gray-800 section-title">2. Alcance del Proyecto</h2>
                 <div class="mt-8 text-gray-600 bg-gray-50 p-6 rounded-xl border border-gray-200">
                     <p class="mb-4 font-medium text-gray-700">El proyecto contempla el desarrollo y entrega de los siguientes componentes:</p>
@@ -109,11 +113,11 @@
             </section>
 
             <!-- Modules Section -->
-            <section class="mt-12">
+            <section class="mt-12 page-break-inside-avoid">
                 <h2 class="text-3xl font-bold text-gray-800 section-title">3. Descripción de Módulos</h2>
                 <div class="space-y-10 mt-8">
                     <!-- Plataforma Web -->
-                    <div class="flex flex-col md:flex-row items-start gap-8">
+                    <div class="flex flex-col md:flex-row items-start gap-8 page-break-inside-avoid">
                         <div class="w-full md:w-1/2">
                             <h3 class="text-2xl font-bold text-gray-800">Plataforma Web de Administración</h3>
                             <p class="text-gray-600 mt-4 text-sm leading-relaxed">Será el centro de control del sistema, accesible desde cualquier navegador web. Sus funcionalidades clave incluyen:</p>
@@ -161,9 +165,9 @@
                         </div>
                     </div>
                     <!-- Apps Móviles -->
-                    <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="grid md:grid-cols-3 gap-8 text-center page-break-inside-avoid">
                         <!-- App Garita -->
-                        <div>
+                        <div class="page-break-inside-avoid">
                             <h3 class="text-xl font-bold text-gray-800">App: Garita</h3>
                             <div class="mt-4 bg-gray-100 p-4 rounded-xl border border-gray-200">
                                 <div class="bg-white pt-6 pb-2 px-2 rounded-lg shadow-lg">
@@ -180,7 +184,7 @@
                             </ul>
                         </div>
                         <!-- App Seguridad -->
-                        <div>
+                        <div class="page-break-inside-avoid">
                             <h3 class="text-xl font-bold text-gray-800">App: Seguridad</h3>
                             <div class="mt-4 bg-gray-100 p-4 rounded-xl border border-gray-200">
                                 <div class="bg-white pt-6 pb-2 px-2 rounded-lg shadow-lg">
@@ -198,7 +202,7 @@
                             </ul>
                         </div>
                         <!-- App Lavado -->
-                        <div>
+                        <div class="page-break-inside-avoid">
                             <h3 class="text-xl font-bold text-gray-800">App: Lavado</h3>
                             <div class="mt-4 bg-gray-100 p-4 rounded-xl border border-gray-200">
                                 <div class="bg-white pt-6 pb-2 px-2 rounded-lg shadow-lg">
@@ -222,7 +226,7 @@
             </section>
 
             <!-- Timeline Section -->
-            <section class="mt-12">
+            <section class="mt-12 page-break-inside-avoid">
                 <h2 class="text-3xl font-bold text-gray-800 section-title">4. Cronograma de Desarrollo</h2>
                 <div class="mt-8 flow-root">
                     <div class="-my-8">
@@ -254,7 +258,7 @@
             </section>
 
             <!-- Investment Section -->
-            <section class="mt-12">
+            <section class="mt-12 page-break-inside-avoid">
                 <div class="gradient-bg text-white text-center p-8 md:p-12 rounded-2xl shadow-xl">
                     <h2 class="text-3xl font-bold">Inversión Total</h2>
                     <p class="text-6xl font-extrabold mt-4 tracking-tight">$500.00 USD</p>
@@ -267,7 +271,7 @@
             </section>
 
             <!-- Terms Section -->
-            <section class="mt-12">
+            <section class="mt-12 page-break-inside-avoid">
                 <h2 class="text-3xl font-bold text-gray-800 section-title">5. Términos y Condiciones</h2>
                 <ul class="list-disc list-inside space-y-3 mt-8 text-gray-600">
                     <li><strong>Responsabilidades del Cliente:</strong> Proveer la infraestructura necesaria para el despliegue (servidor, dominio, etc.).</li>
@@ -279,7 +283,7 @@
         </div>
         
         <!-- Footer -->
-        <footer class="text-center mt-8 p-8 border-t border-gray-200 text-gray-500">
+        <footer class="text-center mt-8 p-8 border-t border-gray-200 text-gray-500 page-break-inside-avoid">
             <p>Agradecemos su confianza en FG Tech.</p>
             <p class="font-semibold">Atentamente, El equipo de FG Tech</p>
         </footer>
